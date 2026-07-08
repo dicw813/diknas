@@ -1,8 +1,8 @@
-// URL Web App Google Apps Script terbaru Anda
+// URL Web App Google Apps Script terbaru Anda yang sudah diperbaiki ujungnya
 const scriptURL = 'https://google.com';
 
 function kirimFormulirKeSheets() {
-    // 1. Ambil data dari elemen input HTML berdasarkan ID masing-masing
+    // 1. Mengambil data dari elemen input HTML berdasarkan ID masing-masing
     const nama = document.getElementById('nama').value.trim();
     const nisn = document.getElementById('nisn').value.trim();
     const gender = document.getElementById('gender').value;
