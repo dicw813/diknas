@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dindik Kota Batu - Layanan</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FIX CSS TAMBAHAN: MENYELARASKAN TAMPILAN LACI MOBILE AGAR SAMA SEPERTI INDEX -->
+    <style>
+        @media (max-width: 992px) {
+            /* Membatasi lebar laci navigasi mobile agar tidak menutupi seluruh layar secara transparan */
+            header nav {
+                position: fixed !important;
+                top: 0 !important;
+                right: -300px !important;
+                left: auto !important;
+                width: 240px !important; /* Lebar ringkas sesuai index */
+                height: 100vh !important;
+                background-color: #347DF7 !important; /* Memastikan latar belakang tidak transparan */
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                padding: 70px 0 20px 0 !important; /* Memangkas padding atas agar rapat */
+                transition: right 0.3s ease-in-out !important;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2) !important;
+                display: flex !important;
+            }
+            /* Menampilkan menu dari sisi kanan saat aktif */
+            header nav.active {
+                right: 0 !important;
+            }
+            header nav a {
+                margin: 0 !important; 
+                display: block !important;
+                width: 100% !important;
+                text-align: left !important; /* Rata kiri sesuai index */
+                padding: 10px 20px !important; /* Jarak baris rapat maksimal */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Garis pembatas rapi */
+                box-sizing: border-box !important;
+                transition: background 0.2s ease !important;
+                font-size: 0.95rem !important; /* Ukuran huruf proporsional */
+            }
+            /* Efek visual saat menu ditekan/disentuh */
+            header nav a:hover, header nav a.active {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+            /* Menghilangkan garis bawah pada item menu terakhir */
+            header nav a:last-child {
+                border-bottom: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BAGIAN NAVIGATION HEADER -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="kotabatu.png" alt="Logo Kota Batu">
+                <div class="logo-title">
+                    <span class="text-top">Dinas Pendidikan</span>
+                    <span class="text-bottom">Kota Batu</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- TOMBOL HAMBURGER MOBILE -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <!-- Bagian Menu Navigasi -->
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="layanan.html" class="active">Layanan</a>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA (GAYA INLINE SUDAH DIHAPUS TOTAL AGAR MENGIKUTI CSS) -->
+    <main class="services-page">
+        <div class="services-container">
+            
+            <!-- HEADER HALAMAN -->
+            <div class="services-page-header">
+                <h2>Layanan Publik</h2>
+                <p>Daftar fasilitasi administrasi, sistem informasi pengaduan, and program bantuan operasional sekolah di lingkungan Kota Wisata Batu.</p>
+            </div>
+
+            <!-- KONTEN AREA GRID LAYANAN -->
+            <div class="services-page-grid">
+
+                <!-- KARTU 1: Legalisir Ijazah -->
+                <div class="service-page-card" id="legalisir">
+                    <div class="card-text-content">
+                        <div class="service-icon">✍️</div>
+                        <h3>Legalitas Ijazah</h3>
+                        <p>Pelayanan verifikasi data kelulusan, penggantian ijazah rusak, atau hilang untuk jenjang pendidikan dasar.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="dokumen/legalisir.pdf" target="_blank" class="btn-preview">Preview PDF ↗</a>
+                        <a href="dokumen/legalisir.pdf" download="Panduan_Legalisir_DindikBatu.pdf" class="btn-download">Unduh File ↓</a>
+                    </div>
+                </div>
+
+                <!-- KARTU 2: Beasiswa & PIP -->
+                <div class="service-page-card" id="beasiswa-pip">
+                    <div class="card-text-content">
+                        <div class="service-icon">📜</div>
+                        <h3>Beasiswa & PIP</h3>
+                        <p>Informasi program bantuan dana pendidikan bagi siswa berprestasi serta siswa kurang mampu.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="dokumen/panduan-beasiswa.pdf" target="_blank" class="btn-preview">Preview PDF ↗</a>
+                        <a href="dokumen/panduan-beasiswa.pdf" download="Panduan_Beasiswa_PIP_DindikBatu.pdf" class="btn-download">Unduh File ↓</a>
+                    </div>
+                </div>
+                <!-- KARTU 3: Direktori Sekolah -->
+                <div class="service-page-card" id="direktori-sekolah">
+                    <div class="card-text-content">
+                        <div class="service-icon">🏫</div>
+                        <h3>Direktori Sekolah</h3>
+                        <p>Eksplorasi data pokok pendidikan, status akreditasi, dan sebaran profil satuan pendidikan.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="dokumen/direktori-sekolah.pdf" target="_blank" class="btn-preview">Preview PDF ↗</a>
+                        <a href="dokumen/direktori-sekolah.pdf" download="Direktori_Sekolah_DindikBatu.pdf" class="btn-download">Unduh File ↓</a>
+                    </div>
+                </div>
+
+                <!-- KARTU 4: Mutasi Siswa -->
+                <div class="service-page-card" id="mutasi">
+                    <div class="card-text-content">
+                        <div class="service-icon">🗂️</div>
+                        <h3>Mutasi Siswa</h3>
+                        <p>Prosedur pengurusan pindah sekolah masuk atau keluar wilayah kerja Dinas Pendidikan Kota Batu.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="dokumen/panduan-mutasi.pdf" target="_blank" class="btn-preview">Preview PDF ↗</a>
+                        <a href="dokumen/panduan-mutasi.pdf" download="Panduan_Mutasi_Siswa_DindikBatu.pdf" class="btn-download">Unduh File ↓</a>
+                    </div>
+                </div>
+
+                <!-- KARTU 5: Sistem Pengaduan -->
+                <div class="service-page-card" id="pengaduan">
+                    <div class="card-text-content">
+                        <div class="service-icon">💬</div>
+                        <h3>Sistem Pengaduan</h3>
+                        <p>Saluran resmi penyampaian aspirasi, saran, atau aduan terkait pelayanan pendidikan di Kota Batu.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="dokumen/alur-pengaduan.pdf" target="_blank" class="btn-preview">Preview PDF ↗</a>
+                        <a href="dokumen/alur-pengaduan.pdf" download="Alur_Pengaduan_DindikBatu.pdf" class="btn-download">Unduh File ↓</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- BAGIAN FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Dinas Pendidikan Kota Batu</h3>
+                <p>Penyedia layanan administrasi dan peningkatan mutu pendidikan dasar dan menengah yang transparan di wilayah Kota Wisata Batu.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Tautan Pintas</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontak Kami</h3>
+                <p>📍 Balai Kota Among Tani, Gedung B Lantai 2, Jl. Panglima Sudirman No. 507, Kota Batu, Jawa Timur</p>
+                <p>📞 (0341) 591097</p>
+                <p>✉️ admin@batukota.go.id</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dinas Pendidikan Kota Batu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- TAUTAN PEMANGGIL FILE JAVASCRIPT EKSTERNAL YANG BARU -->
+    <script src="script.js"></script>
+</body>
+</html>

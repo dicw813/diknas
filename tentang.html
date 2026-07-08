@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dindik Kota Batu - Tentang Kami</title>
+    <!-- MENGGUNAKAN FILE CSS UTAMA ANDA -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FIX CSS TAMBAHAN: MENYELARASKAN TAMPILAN LACI MOBILE AGAR SAMA SEPERTI INDEX -->
+    <style>
+        @media (max-width: 992px) {
+            /* Membatasi lebar laci navigasi mobile agar tidak menutupi seluruh layar secara transparan */
+            header nav {
+                position: fixed !important;
+                top: 0 !important;
+                right: -300px !important;
+                left: auto !important;
+                width: 240px !important; /* Lebar ringkas sesuai index */
+                height: 100vh !important;
+                background-color: #347DF7 !important; /* Memastikan latar belakang tidak transparan */
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                padding: 70px 0 20px 0 !important; /* Memangkas padding atas agar rapat */
+                transition: right 0.3s ease-in-out !important;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2) !important;
+                display: flex !important;
+            }
+            /* Menampilkan menu dari sisi kanan saat aktif */
+            header nav.active {
+                right: 0 !important;
+            }
+            header nav a {
+                margin: 0 !important; 
+                display: block !important;
+                width: 100% !important;
+                text-align: left !important; /* Rata kiri sesuai index */
+                padding: 10px 20px !important; /* Jarak baris rapat maksimal */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Garis pembatas rapi */
+                box-sizing: border-box !important;
+                transition: background 0.2s ease !important;
+                font-size: 0.95rem !important; /* Ukuran huruf proporsional */
+            }
+            /* Efek visual saat menu ditekan/disentuh */
+            header nav a:hover, header nav a.active {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+            /* Menghilangkan garis bawah pada item menu terakhir */
+            header nav a:last-child {
+                border-bottom: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BAGIAN NAVIGATION HEADER -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="kotabatu.png" alt="Logo Kota Batu">
+                <div class="logo-title">
+                    <span class="text-top">Dinas Pendidikan</span>
+                    <span class="text-bottom">Kota Batu</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- TOMBOL HAMBURGER MOBILE -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <!-- Bagian Menu Navigasi -->
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html" class="active">Tentang Kami</a>
+            <a href="layanan.html">Layanan</a>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="about-page">
+        <div class="about-container">
+            
+            <!-- HEADER HALAMAN -->
+            <div class="about-header">
+                <h2>Profil Dinas Pendidikan</h2>
+                <p>Mengenal lebih dekat arah kebijakan, cita-cita luhur, dan komitmen pelayanan administrasi pendidikan di wilayah Kota Wisata Batu.</p>
+            </div>
+
+            <!-- SECTION VISI MISI -->
+            <div class="vision-mission-grid" id="visi-misi">
+                <div class="vision-card">
+                    <h3>👁️ Visi Instansi</h3>
+                    <p>Mewujudkan penyelenggaraan pendidikan dasar dan menengah yang berkualitas, berkarakter luhur, mandiri, berdaya saing, serta inklusif bagi seluruh lapisan masyarakat menuju Kota Wisata Batu yang sejahtera.</p>
+                </div>
+
+                <div class="mission-card">
+                    <h3>🎯 Misi Instansi</h3>
+                    <ul>
+                        <li>Meningkatkan pemerataan akses layanan pendidikan dasar yang terjangkau and bermutu.</li>
+                        <li>Mengembangkan kompetensi, profesionalisme, dan kesejahteraan tenaga pendidik secara berkelanjutan.</li>
+                        <li>Mendorong pembentukan karakter siswa berbasis nilai keagamaan, kearifan lokal, dan budi pekerti.</li>
+                        <li>Mewujudkan tata kelola birokrasi dinas yang transparan, akuntabel, dan berbasis teknologi digital.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- SECTION TUPOKSI -->
+            <div class="tugas-pokok" id="tupoksi">
+                <h3>💼 Tugas Pokok & Fungsi (Tupoksi)</h3>
+                <p>Dinas Pendidikan Kota Batu mempunyai tugas pokok melaksanakan urusan pemerintahan daerah di bidang pengelolaan pendidikan berdasarkan asas otonomi dan tugas pembantuan. Hal ini meliputi perumusan kebijakan teknis, penyelenggaraan kurikulum, pembinaan kelembagaan satuan pendidikan, serta fasilitasi pengembangan sarana dan prasarana sekolah di wilayah Kota Batu.</p>
+            </div>
+
+            <!-- SECTION STRUKTUR ORGANISASI -->
+            <div class="structure-section" id="struktur">
+                <h3>👥 Struktur Organisasi</h3>
+                <p class="structure-intro">Susunan pemangku jabatan utama dalam struktur birokrasi tata kelola Dinas Pendidikan Kota Batu:</p>
+                
+                <div class="org-chart-text">
+                    <!-- Tingkat 1: Kepala Dinas -->
+                    <div class="org-node leader">
+                        <h4>Kepala Dinas Pendidikan</h4>
+                        <p>Penanggung Jawab Utama Operasional & Kebijakan</p>
+                    </div>
+
+                    <!-- Tingkat 2: Sekretariat -->
+                    <div class="org-node sub-leader">
+                        <h4>Sekretaris Dinas</h4>
+                        <p>Pengelola Administrasi, Keuangan, & Kepegawaian</p>
+                    </div>
+
+                    <!-- Tingkat 3: Bidang Pembinaan (Grid) -->
+                    <div class="org-fields-grid">
+                        <div class="org-node field">
+                            <h4>Bidang Pembinaan SD</h4>
+                            <p>Kurikulum & Kesiswaan Sekolah Dasar</p>
+                        </div>
+                        <div class="org-node field">
+                            <h4>Bidang Pembinaan SMP</h4>
+                            <p>Kurikulum & Kesiswaan Sekolah Menengah Pertama</p>
+                        </div>
+                        <div class="org-node field">
+                            <h4>Bidang Pembinaan Paud & PNF</h4>
+                            <p>Pendidikan Anak Usia Dini & Non-Formal</p>
+                        </div>
+                        <div class="org-node field">
+                            <h4>Bidang Ketenagaan</h4>
+                            <p>Pembinaan & Pengembangan Guru & Tenaga Kependidikan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- BAGIAN FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Dinas Pendidikan Kota Batu</h3>
+                <p>Penyedia layanan administrasi dan peningkatan mutu pendidikan dasar dan menengah yang transparan di wilayah Kota Wisata Batu.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Tautan Pintas</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontak Kami</h3>
+                <p>📍 Balai Kota Among Tani, Gedung B Lantai 2, Jl. Panglima Sudirman No. 507, Kota Batu, Jawa Timur</p>
+                <p>📞 (0341) 591097</p>
+                <p>✉️ admin@batukota.go.id</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dinas Pendidikan Kota Batu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- TAUTAN PEMANGGIL FILE JAVASCRIPT EKSTERNAL YANG BARU -->
+    <script src="script.js"></script>
+</body>
+</html>

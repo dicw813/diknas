@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Online - Dindik Kota Batu</title>
+    <!-- Menghubungkan ke file CSS eksternal yang sama -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BAGIAN NAVIGATION HEADER -->
+    <header>
+        <!-- Logo Gambar dan Teks -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="kotabatu.png" alt="Logo Kota Batu">
+                <div class="logo-title">
+                    <span class="text-top">Dinas Pendidikan</span>
+                    <span class="text-bottom">Kota Batu</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Menu Navigasi Hanya Beranda -->
+        <nav>
+            <a href="index.html">Beranda</a>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA FORMULIR -->
+    <main class="register-page">
+        <div class="form-container">
+            <!-- Header Formulir -->
+            <div class="form-header">
+                <h2>Formulir Pendaftaran Online</h2>
+                <p>Silakan isi data calon peserta didik dengan lengkap dan benar sesuai dokumen resmi.</p>
+            </div>
+
+            <!-- Komponen Form Pendaftaran -->
+            <form action="#" method="POST" class="registration-form">
+                
+                <!-- Grup: Data Pribadi -->
+                <div class="form-section-title">Data Calon Peserta Didik</div>
+                
+                <div class="form-group">
+                    <label for="nama_lengkap">Nama Lengkap</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama sesuai ijazah/akta" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nik">NIK (Nomor Induk Kependudukan)</label>
+                        <input type="text" id="nik" name="nik" placeholder="16 digit NIK" maxlength="16" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nisn">NISN (Jika Ada)</label>
+                        <input type="text" id="nisn" name="nisn" placeholder="10 digit NISN" maxlength="10">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tempat_lahir">Tempat Lahir</label>
+                        <input type="text" id="tempat_lahir" name="tempat_lahir" placeholder="Kota/Kabupaten" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal_lahir">Tanggal Lahir</label>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jenjang">Jenjang Pendidikan yang Dituju</label>
+                    <select id="jenjang" name="jenjang" required>
+                        <option value="" disabled selected>-- Pilih Jenjang Sekolah --</option>
+                        <option value="TK">Taman Kanak-Kanak (TK)</option>
+                        <option value="SD">Sekolah Dasar (SD)</option>
+                        <option value="SMP">Sekolah Menengah Pertama (SMP)</option>
+                    </select>
+                </div>
+
+                <!-- Grup: Data Orang Tua -->
+                <div class="form-section-title">Data Orang Tua / Wali</div>
+
+                <div class="form-group">
+                    <label for="nama_orangtua">Nama Lengkap Ayah/Ibu/Wali</label>
+                    <input type="text" id="nama_orangtua" name="nama_orangtua" placeholder="Masukkan nama orang tua kandung atau wali" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="no_hp">Nomor WhatsApp Aktif</label>
+                        <input type="tel" id="no_hp" name="no_hp" placeholder="Contoh: 081234567xxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat Domisili Sekarang</label>
+                    <textarea id="alamat" name="alamat" rows="4" placeholder="Tuliskan nama jalan, RT/RW, kelurahan, dan kecamatan secara detail" required></textarea>
+                </div>
+
+                <!-- Tombol Submit Formulir -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- BAGIAN FOOTER (Konsisten) -->
+    <footer>
+        <p>&copy; 2026 Website Saya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
