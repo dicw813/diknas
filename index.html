@@ -6,51 +6,6 @@
     <title>Dindik Kota Batu - Beranda</title>
     <!-- MENGGUNAKAN FILE CSS UTAMA ANDA -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- FIX CSS TAMBAHAN: MERAPATKAN JARAK NAVIGASI MOBILE SECARA MAKSIMAL -->
-    <style>
-        @media (max-width: 992px) {
-            /* Membatasi lebar laci navigasi mobile agar tidak menutupi seluruh layar secara transparan */
-            header nav {
-                position: fixed !important;
-                top: 0 !important;
-                right: -300px !important;
-                left: auto !important;
-                width: 240px !important; /* Lebar diperkecil sedikit agar lebih ringkas */
-                height: 100vh !important;
-                background-color: #347DF7 !important; /* Memastikan latar belakang tidak transparan */
-                flex-direction: column !important;
-                justify-content: flex-start !important;
-                padding: 70px 0 20px 0 !important; /* Memangkas padding atas laci agar menu naik ke atas */
-                transition: right 0.3s ease-in-out !important;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.2) !important;
-                display: flex !important;
-            }
-            /* Menampilkan menu dari sisi kanan saat aktif */
-            header nav.active {
-                right: 0 !important;
-            }
-            header nav a {
-                margin: 0 !important; 
-                display: block !important;
-                width: 100% !important;
-                text-align: left !important; /* Tetap rata kiri */
-                padding: 10px 20px !important; /* Dibuat sangat rapat (tinggi baris mengecil) */
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Garis pembatas tipis yang rapi */
-                box-sizing: border-box !important;
-                transition: background 0.2s ease !important;
-                font-size: 0.95rem !important; /* Mengecilkan ukuran font sedikit agar serasi dengan jarak rapat */
-            }
-            /* Efek visual saat menu ditekan/disentuh */
-            header nav a:hover, header nav a.active {
-                background-color: rgba(255, 255, 255, 0.1) !important;
-            }
-            /* Menghilangkan garis bawah pada item menu terakhir */
-            header nav a:last-child {
-                border-bottom: none !important;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -78,6 +33,7 @@
             <a href="index.html" class="active">Beranda</a>
             <a href="tentang.html">Tentang Kami</a>
             <a href="layanan.html">Layanan</a>
+            <a href="berita.html">Berita</a>
         </nav>
     </header>
 
@@ -111,7 +67,6 @@
                 <span class="dot"></span>
             </div>
         </section>
-
 
         <!-- 2. PROFIL UTAMA SECTION (GRID LAYOUT) -->
         <section id="profil" class="services-section">
@@ -155,7 +110,6 @@
                 </div>
             </div>
         </section>
-
         <!-- 3. LAYANAN UNGGULAN SECTION (GRID LAYOUT) -->
         <section id="layanan" class="services-section">
             <div class="services-container">
@@ -178,28 +132,28 @@
                         <div class="service-card">
                             <div class="service-icon">📜</div>
                             <h3>Beasiswa & PIP</h3>
-                            <p>Informasi program bantuan dana pendidikan bagi siswa berprestasi serta siswa kurang mampu.</p>
+                            <p>Informasi program bantuan dana pendidikan bagi siswa berprestasi serta jaminan Program Indonesia Pintar.</p>
                         </div>
                     </a>
 
-                    <!-- KARTU DIREKTORI SEKOLAH -->
-                    <a href="layanan.html#direktori-sekolah" class="service-card-wrapper">
+                    <!-- KARTU PPDB -->
+                    <a href="layanan.html#ppdb" class="service-card-wrapper">
                         <div class="service-card">
                             <div class="service-icon">🏫</div>
-                            <h3>Direktori Sekolah</h3>
-                            <p>Eksplorasi data pokok pendidikan, status akreditasi, dan sebaran profil satuan pendidikan.</p>
+                            <h3>PPDB Online</h3>
+                            <p>Panduan pendaftaran, pengumuman jalur zonasi, serta verifikasi berkas masuk TK, SD, dan SMP.</p>
                         </div>
                     </a>
                 </div>
 
-                <!-- TOMBOL SELENGKAPNYA LAYANAN -->
+                <!-- SATU TOMBOL SELENGKAPNYA LAYANAN -->
                 <div class="section-action">
                     <a href="layanan.html" class="btn-more">Lihat Semua Layanan ➔</a>
                 </div>
             </div>
         </section>
 
-        <!-- 4. BERITA TERBARU SECTION (GRID LAYOUT) -->
+        <!-- 4. SEKSI BERITA TERBARU (SINKRON TOTAL DENGAN FORMAT SECTION LAYANAN) -->
         <section id="berita" class="services-section">
             <div class="services-container">
                 <div class="services-header">
@@ -208,68 +162,71 @@
                 
                 <div class="services-grid">
                     <!-- KARTU BERITA 1 -->
-                    <a href="berita.html#berita-1" class="service-card-wrapper">
-                        <div class="service-card">
-                            <div class="service-icon">📰</div>
-                            <h3>Peningkatan Mutu Guru</h3>
-                            <p>Dinas Pendidikan Kota Batu menggelar pelatihan intensif guna meningkatkan kompetensi pedagogik tenaga pendidik.</p>
+                    <div class="service-card" id="berita-1">
+                        <div class="service-icon">📰</div>
+                        <h3>Digitalisasi Guru SD</h3>
+                        <p style="margin-bottom: 25px;">Dinas Pendidikan Kota Batu menggelar pelatihan intensif guna membekali tenaga pendidik dengan metode pembelajaran modern berbasis multimedia.</p>
+                        <div style="display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap;">
+                            <a href="berita.html" class="btn-more" style="padding: 8px 15px; font-size: 0.85rem;">Info Lengkap ↗</a>
                         </div>
-                    </a>
+                    </div>
 
                     <!-- KARTU BERITA 2 -->
-                    <a href="berita.html#berita-2" class="service-card-wrapper">
-                        <div class="service-card">
-                            <div class="service-icon">🏆</div>
-                            <h3>Prestasi Siswa Batu</h3>
-                            <p>Siswa sekolah dasar di Kota Batu berhasil meraih penghargaan bergengsi dalam ajang olimpiade sains tingkat provinsi.</p>
+                    <div class="service-card" id="berita-2">
+                        <div class="service-icon">🏆</div>
+                        <h3>Prestasi Siswa Batu</h3>
+                        <p style="margin-bottom: 25px;">Perwakilan pelajar Kota Wisata Batu berhasil meraih medali emas dalam ajang Olimpiade Sains tingkat provinsi tahun ini.</p>
+                        <div style="display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap;">
+                            <a href="berita.html" class="btn-more" style="padding: 8px 15px; font-size: 0.85rem;">Info Lengkap ↗</a>
                         </div>
-                    </a>
+                    </div>
 
                     <!-- KARTU BERITA 3 -->
-                    <a href="berita.html#berita-3" class="service-card-wrapper">
-                        <div class="service-card">
-                            <div class="service-icon">✨</div>
-                            <h3>Inovasi Kelas Inklusif</h3>
-                            <p>Peluncuran program sistem pembelajaran baru untuk mendukung ruang lingkup inklusi sekolah dasar.</p>
+                    <div class="service-card" id="berita-3">
+                        <div class="service-icon">🌱</div>
+                        <h3>Edukasi Lingkungan</h3>
+                        <p style="margin-bottom: 25px;">Penerapan program Adiwiyata di seluruh jenjang sekolah guna membentuk generasi muda yang sadar kelestarian alam dan lingkungan.</p>
+                        <div style="display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap;">
+                            <a href="berita.html" class="btn-more" style="padding: 8px 15px; font-size: 0.85rem;">Info Lengkap ↗</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <!-- TOMBOL SELENGKAPNYA BERITA -->
+                <!-- SATU TOMBOL SELENGKAPNYA BERITA -->
                 <div class="section-action">
-                    <a href="berita.html" class="btn-more">Baca Berita Lainnya ➔</a>
+                    <a href="berita.html" class="btn-more">Lihat Berita Lainnya ➔</a>
                 </div>
             </div>
         </section>
     </main>
-          <!-- BAGIAN FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info">
+
+    <!-- BAGIAN FOOTER (SINKRON DENGAN HALAMAN LAYANAN) -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-column footer-brand">
                 <h3>Dinas Pendidikan Kota Batu</h3>
-                <p>Penyedia layanan administrasi dan peningkatan mutu pendidikan dasar dan menengah yang transparan di wilayah Kota Wisata Batu.</p>
+                <p>Meningkatkan mutu pelayanan pendidikan demi masa depan generasi bangsa yang cerdas dan berkarakter.</p>
             </div>
-            <div class="footer-links">
-                <h3>Tautan Pintas</h3>
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="tentang.html">Tentang Kami</a></li>
-                    <li><a href="layanan.html">Layanan</a></li>
-                </ul>
+            <div class="footer-column footer-links">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="layanan.html">Layanan Publik</a>
+                <a href="berita.html">Berita & Pengumuman</a>
             </div>
-            <div class="footer-contact">
-                <h3>Kontak Kami</h3>
-                <p>📍 Balai Kota Among Tani, Gedung B Lantai 2, Jl. Panglima Sudirman No. 507, Kota Batu, Jawa Timur</p>
-                <p>📞 (0341) 591097</p>
-                <p>✉️ admin@batukota.go.id</p>
+            <div class="footer-column footer-contact-info">
+                <h4>Hubungi Kami</h4>
+                <p>📍 Jl. Panglima Sudirman No. 507, Kota Batu, Jawa Timur</p>
+                <p>📞 (0341) 591143</p>
+                <p>✉️ disdik@kotabatu.go.id</p>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-copyright">
             <p>&copy; 2026 Dinas Pendidikan Kota Batu. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- PEMANGGIL FILE JAVASCRIPT EKSTERNAL YANG BARU -->
+    <!-- SKRIP UTAMA WEBSITE -->
     <script src="script.js"></script>
 </body>
 </html>
